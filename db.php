@@ -1,4 +1,14 @@
 <?php
-$dblink = mysql_connect('localhost','USER','PASS') or die(mysql_error());
-mysql_select_db('state_population');
+// mysql host
+$host = 'localhost';
+// user name
+$user = 'root';
+// password
+$pass = 'b00gn1sh';
+// PDO connect *********
+try {
+  $db = new PDO("mysql:host=$host;dbname=state_population", $user, $pass);
+} catch(PDOException $e) {
+    echo $e->getMessage();
+  }
 ?>
