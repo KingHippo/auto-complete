@@ -18,4 +18,4 @@ while($row = mysql_fetch_array($rs, MYSQL_ASSOC)){
 	);
 }
 echo json_encode($data);
-flush(); // Vide les tampons de sortie
+flush(); // Vide les tampons de sorti
