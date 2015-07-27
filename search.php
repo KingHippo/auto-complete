@@ -4,7 +4,7 @@ include('db.php');
 $searchTerm = '%' . $_GET['term'] . '%';
 
 // SQL QUERY FOR SEARCH BOX
-$query = $db->prepare("SELECT DISTINCT location FROM population WHERE location LIKE :searchTerm");
+$query = $db->prepare("SELECT location FROM population WHERE location LIKE :searchTerm ORDER BY population LIMIT 0,10");
 // BIND PARAMETER
 $query->bindParam(':searchTerm', $searchTerm);
 // EXECUTE PREPARED STATEMENT
