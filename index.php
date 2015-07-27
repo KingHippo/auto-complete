@@ -1,5 +1,6 @@
-<?php require('db.php'); ?>
-<html>
+<?php include('db.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
 		<title>City Population</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -9,8 +10,9 @@
 	</head>
     <body>
 
-        <form action="" method="post">
-			Régions: <input name="region" id="regionsearch" type="text" />
+        <form method="post" action="result.php">
+			Régions: <input name="regionsearch" id="regionsearch" type="text" />
+				<button class="btn" type="submit">Search</button>
         </form>
 
 			<!-- JAVASCRIPT -->
@@ -18,7 +20,7 @@
 			<script type="text/javascript" src="js/jquery-ui.js"></script>
 			<!-- JQUERY AUTOCOMPLETE OPTIONS -->
 			<script type="text/javascript">
-				jQuery(document).ready(function(){
+				$(document).ready(function(){
 					$('#regionsearch').autocomplete({
 					source : 'search.php',
 					minLength : 3,
