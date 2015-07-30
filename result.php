@@ -5,19 +5,21 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<!-- JQUERY STYLE CSS -->
 		<link rel="stylesheet" href="css/jquery-ui.css" media="screen" title="no title" charset="utf-8">
-
+		<link rel="stylesheet" href="css/foundation.css" />
+		<script src="js/vendor/modernizr.js"></script>
 	</head>
     <body>
 
-        <form method="post" action="result.php">
-			       City Name: <input name="regionsearch" id="regionsearch" type="text" />
-             <button class="btn" type="submit">Search</button>
-        </form>
+			<div class="row">
+				<div class="small-6 columns">
+				<form method="post" action="result.php">
+			City Name: <input name="regionsearch" id="regionsearch" type="text" />
+				<button class="btn" type="submit">Search</button>
+				</form>
 
       <?php
 
         if($_POST[regionsearch]=='') {
-
           echo "<p>Type something before searching!</p>";
         } else {
           echo "<table>";
@@ -49,6 +51,8 @@
           }
           echo "</tbody>";
           echo "</table>";
+					echo "</div>";
+					echo "</div>";
         }
        ?>
 
@@ -64,5 +68,10 @@
  					});
  				});
  			</script>
+			<script src="js/vendor/jquery.js"></script>
+			<script src="js/foundation.min.js"></script>
+			<script>
+				$(document).foundation();
+			</script>
    	</body>
 </html>
