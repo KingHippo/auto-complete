@@ -11,7 +11,7 @@
     <body>
 
         <form method="post" action="result.php">
-			Régions: <input name="regionsearch" id="regionsearch" type="text" />
+			City Name: <input name="regionsearch" id="regionsearch" type="text" />
 				<button class="btn" type="submit">Search</button>
         </form>
 
